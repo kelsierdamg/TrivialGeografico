@@ -6,7 +6,7 @@
     <ScrollView>
         <Grid>
             <Image
-                Source="europa.jpg"
+                Source="mapamundi.jpg"
                 Aspect="AspectFill"
                 Opacity="0.7" />
 

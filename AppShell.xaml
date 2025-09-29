@@ -7,7 +7,7 @@
     Title="TrivialGeografico">
 
     <ShellContent
-        Title="Home"
+        Title="Juego de Trvial Geográfico"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
