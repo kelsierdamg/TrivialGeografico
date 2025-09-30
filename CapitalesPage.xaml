@@ -21,6 +21,24 @@
             <Button x:Name="opcion2" Clicked="OpcionesClicked" HorizontalOptions="Center" FontFamily="Consola" FontSize="20" BackgroundColor="#80FFFFFF" TextColor="Black" BorderColor="Black" BorderWidth="2"/>
             <Button x:Name="opcion3" Clicked="OpcionesClicked" HorizontalOptions="Center" FontFamily="Consola" FontSize="20" BackgroundColor="#80FFFFFF" TextColor="Black" BorderColor="Black" BorderWidth="2"/>
             <Button x:Name="opcion4" Clicked="OpcionesClicked" HorizontalOptions="Center" FontFamily="Consola" FontSize="20" BackgroundColor="#80FFFFFF" TextColor="Black" BorderColor="Black" BorderWidth="2"/>
+
+            <Label
+             x:Name="aciertoLabel"
+             TextColor="Black"
+             FontSize="24"
+             FontFamily="Consola Italic"
+             VerticalOptions="End"
+             HorizontalOptions="Start"
+             Margin="10" />
+
+            <Label
+             x:Name="falloLabel"
+             TextColor="Black"
+             FontSize="24"
+             FontFamily="Consola Italic"
+             VerticalOptions="End"
+             HorizontalOptions="End"
+             Margin="10" />
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

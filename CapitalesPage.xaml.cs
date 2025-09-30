@@ -32,7 +32,7 @@ public partial class CapitalesPage : ContentPage
 
         // Obtén tres respuestas incorrectas
         var opcionesIncorrectas = capitales.Values
-            .Where(c => c != respuestaCorrecta)
+            .Where(capital => capital != respuestaCorrecta)
             .OrderBy(_ => random.Next())
             .Take(3)
             .ToList();
@@ -54,14 +54,21 @@ public partial class CapitalesPage : ContentPage
 		var button = (Button)sender;
 		var respuesta = button.Text;
 		var pais = preguntaLabel.Text.Split(' ').Last().TrimEnd('?');
+		int aciertos = 0;
+		int fallos = 0;
+
 		if (capitales[pais] == respuesta)
 		{
-			DisplayAlert("Correcto", "¡Has acertado!", "OK");
-		}
+			DisplayAlert("Correcto", "¡Has acertado!", "Siguiente");
+			aciertos++;
+			aciertoLabel.Text = $"Aciertos: {aciertos.ToString()}";
+        }
 		else
 		{
-			DisplayAlert("Incorrecto", $"La capital de {pais} es {capitales[pais]}.", "OK");
-		}
+			DisplayAlert("Incorrecto", $"La capital de {pais} es {capitales[pais]}.", "Siguiente");
+			fallos++;
+			falloLabel.Text = $"Fallos: {fallos.ToString()}";
+        }
 		Preguntar(this, EventArgs.Empty);
     }
 }
