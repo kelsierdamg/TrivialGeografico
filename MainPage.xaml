@@ -22,24 +22,24 @@
 
                 <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
                     <Button
-                    x:Name="PaisesBtn"
+                    x:Name="CapitalesBtn"
                     Text="Capitales de 10 países" 
                     FontFamily="Consola"
                     FontSize="20"
-                    SemanticProperties.Hint="Te lleva a la página de países"
-                    Clicked="OnPaisesClicked"
+                    SemanticProperties.Hint="Te lleva a la página de capitales"
+                    Clicked="OnCapitalesClicked"
                     BackgroundColor="#80FFFFFF"
                     TextColor="Black"
                     BorderColor="Black"
                     BorderWidth="2" />
 
                     <Button
-                    x:Name="CapitalesBtn"
+                    x:Name="PaisesBtn"
                     Text="Países de 10 capitales"
                     FontFamily="Consola"
                     FontSize="20"
-                    SemanticProperties.Hint="Te lleva a la página de capitales"
-                    Clicked="OnCapitalesClicked"
+                    SemanticProperties.Hint="Te lleva a la página de países"
+                    Clicked="OnPaisesClicked"
                     BackgroundColor="#80FFFFFF"
                     TextColor="Black"
                     BorderColor="Black"
