@@ -13,8 +13,11 @@ namespace TrivialGeografico
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                    fonts.AddFont("Astronomy.otf", "Astronomy");
-                    fonts.AddFont("Best-Quality.otf", "BestQuality");
+                    fonts.AddFont("consola.ttf", "Consola");
+                    fonts.AddFont("consolab.ttf", "Consola Bold");
+                    fonts.AddFont("consolai.ttf", "Consola Italic");
+                    fonts.AddFont("consolaz.ttf", "Consola Bold Italic");
+                    fonts.AddFont("vgasys.fon", "System");
                 });
 
 #if DEBUG
