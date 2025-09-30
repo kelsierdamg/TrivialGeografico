@@ -10,9 +10,17 @@
             Opacity="0.7" />
         <VerticalStackLayout>
             <Label 
-            Text="Welcome to .NET MAUI!"
+            x:Name="preguntaLabel"
+            TextColor="Black"
+            FontSize="32"
+            FontFamily="Consola Italic"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+            <Button x:Name="opcion1" Clicked="OpcionesClicked" HorizontalOptions="Center" FontFamily="Consola" FontSize="20" BackgroundColor="#80FFFFFF" TextColor="Black" BorderColor="Black" BorderWidth="2" />
+            <Button x:Name="opcion2" Clicked="OpcionesClicked" HorizontalOptions="Center" FontFamily="Consola" FontSize="20" BackgroundColor="#80FFFFFF" TextColor="Black" BorderColor="Black" BorderWidth="2"/>
+            <Button x:Name="opcion3" Clicked="OpcionesClicked" HorizontalOptions="Center" FontFamily="Consola" FontSize="20" BackgroundColor="#80FFFFFF" TextColor="Black" BorderColor="Black" BorderWidth="2"/>
+            <Button x:Name="opcion4" Clicked="OpcionesClicked" HorizontalOptions="Center" FontFamily="Consola" FontSize="20" BackgroundColor="#80FFFFFF" TextColor="Black" BorderColor="Black" BorderWidth="2"/>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

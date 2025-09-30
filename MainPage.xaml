@@ -16,6 +16,7 @@
 
                 <Label
                 Text="Elige una opción del juego pulsando un botón"
+                TextColor="Black"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1"
                 FontFamily="Consola Bold Italic" />
