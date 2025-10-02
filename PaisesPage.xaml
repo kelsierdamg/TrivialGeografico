@@ -8,11 +8,42 @@
             Source="parquejapon.jpg"
             Aspect="AspectFill"
             Opacity="0.7" />
-        <VerticalStackLayout>
+        <VerticalStackLayout Padding="50" Spacing="50">
             <Label 
-            Text="Welcome to .NET MAUI!"
+            x:Name="preguntaLabel"
+            FontSize="32"
+            FontFamily="Consola Italic"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+            <Button x:Name="opcion1" Clicked="OpcionesClicked" HorizontalOptions="Center" FontFamily="Consola" FontSize="20" BackgroundColor="#80FFFFFF" BorderColor="Black" BorderWidth="2" TextColor="GhostWhite"/>
+            <Button x:Name="opcion2" Clicked="OpcionesClicked" HorizontalOptions="Center" FontFamily="Consola" FontSize="20" BackgroundColor="#80FFFFFF" BorderColor="Black" BorderWidth="2" TextColor="GhostWhite"/>
+            <Button x:Name="opcion3" Clicked="OpcionesClicked" HorizontalOptions="Center" FontFamily="Consola" FontSize="20" BackgroundColor="#80FFFFFF" BorderColor="Black" BorderWidth="2" TextColor="GhostWhite"/>
+            <Button x:Name="opcion4" Clicked="OpcionesClicked" HorizontalOptions="Center" FontFamily="Consola" FontSize="20" BackgroundColor="#80FFFFFF" BorderColor="Black" BorderWidth="2" TextColor="GhostWhite"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
+             x:Name="aciertoLabel"
+             Grid.Column="0"
+             FontSize="24"
+             FontFamily="Consola Italic"
+             VerticalOptions="End"
+             HorizontalOptions="Start"
+             Margin="10" />
+
+                <Label
+             x:Name="falloLabel"
+             Grid.Column="1"
+             FontSize="24"
+             FontFamily="Consola Italic"
+             VerticalOptions="End"
+             HorizontalOptions="End"
+             Margin="10" />
+            </Grid>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

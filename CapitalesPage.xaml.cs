@@ -2,6 +2,9 @@ namespace TrivialGeografico;
 
 public partial class CapitalesPage : ContentPage
 {
+	int aciertos = 0;
+	int fallos = 0;
+
 	Dictionary<string, string> capitales = new Dictionary<string, string>()
 	{
 		{"España", "Madrid"},
@@ -15,10 +18,13 @@ public partial class CapitalesPage : ContentPage
 		{"Japón", "Tokio"},
 		{"Noruega", "Oslo"},
 	};
+
     public CapitalesPage()
 	{
 		InitializeComponent();
 		Preguntar(this, EventArgs.Empty);
+		aciertoLabel.Text = $"Aciertos: {aciertos}";
+		falloLabel.Text = $"Fallos: {fallos}";
     }
 
 	public void Preguntar(object? sender, EventArgs e)
@@ -54,21 +60,33 @@ public partial class CapitalesPage : ContentPage
 		var button = (Button)sender;
 		var respuesta = button.Text;
 		var pais = preguntaLabel.Text.Split(' ').Last().TrimEnd('?');
-		int aciertos = 0;
-		int fallos = 0;
 
 		if (capitales[pais] == respuesta)
 		{
 			DisplayAlert("Correcto", "¡Has acertado!", "Siguiente");
 			aciertos++;
-			aciertoLabel.Text = $"Aciertos: {aciertos.ToString()}";
+			aciertoLabel.Text = $"Aciertos: {aciertos}";
         }
 		else
 		{
 			DisplayAlert("Incorrecto", $"La capital de {pais} es {capitales[pais]}.", "Siguiente");
 			fallos++;
-			falloLabel.Text = $"Fallos: {fallos.ToString()}";
+			falloLabel.Text = $"Fallos: {fallos}";
         }
-		Preguntar(this, EventArgs.Empty);
+
+        if (aciertos + fallos >= 10)
+        {
+            DisplayAlert("Juego terminado", $"Has completado el juego con {aciertos} aciertos y {fallos} fallos.", "Reiniciar");
+            ResetClicked(this, EventArgs.Empty);
+        }
+        Preguntar(this, EventArgs.Empty);
+    }
+    public void ResetClicked(object? sender, EventArgs e)
+    {
+        aciertos = 0;
+        fallos = 0;
+        aciertoLabel.Text = $"Aciertos: {aciertos}";
+        falloLabel.Text = $"Fallos: {fallos}";
+        Preguntar(this, EventArgs.Empty);
     }
 }

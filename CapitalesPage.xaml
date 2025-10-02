@@ -8,10 +8,9 @@
             Source="cuatrotorres.jpg"
             Aspect="AspectFill"
             Opacity="0.7" />
-        <VerticalStackLayout>
+        <VerticalStackLayout Padding="50" Spacing="50">
             <Label 
             x:Name="preguntaLabel"
-            TextColor="Black"
             FontSize="32"
             FontFamily="Consola Italic"
             VerticalOptions="Center" 
@@ -22,23 +21,29 @@
             <Button x:Name="opcion3" Clicked="OpcionesClicked" HorizontalOptions="Center" FontFamily="Consola" FontSize="20" BackgroundColor="#80FFFFFF" TextColor="Black" BorderColor="Black" BorderWidth="2"/>
             <Button x:Name="opcion4" Clicked="OpcionesClicked" HorizontalOptions="Center" FontFamily="Consola" FontSize="20" BackgroundColor="#80FFFFFF" TextColor="Black" BorderColor="Black" BorderWidth="2"/>
 
-            <Label
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
              x:Name="aciertoLabel"
-             TextColor="Black"
+             Grid.Column="0"
              FontSize="24"
              FontFamily="Consola Italic"
              VerticalOptions="End"
              HorizontalOptions="Start"
              Margin="10" />
 
-            <Label
+                <Label
              x:Name="falloLabel"
-             TextColor="Black"
+             Grid.Column="1"
              FontSize="24"
              FontFamily="Consola Italic"
              VerticalOptions="End"
              HorizontalOptions="End"
              Margin="10" />
+            </Grid>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

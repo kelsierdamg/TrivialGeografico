@@ -3,26 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TrivialGeografico.MainPage">
 
-    <ScrollView>
-        <Grid>
-            <Image
+    <Grid>
+        <Image
                 Source="mapamundi.jpg"
                 Aspect="AspectFill"
                 Opacity="0.7" />
 
-            <VerticalStackLayout
-            Padding="250"
-            Spacing="35">
-
-                <Label
+        <VerticalStackLayout Padding="50" Spacing="50" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label
                 Text="Elige una opción del juego pulsando un botón"
                 TextColor="Black"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1"
-                FontFamily="Consola Bold Italic" />
+                FontFamily="Consola Bold Italic"
+                FontSize="32"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
 
-                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Button
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button
                     x:Name="CapitalesBtn"
                     Text="Capitales de 10 países" 
                     FontFamily="Consola"
@@ -34,7 +31,7 @@
                     BorderColor="Black"
                     BorderWidth="2" />
 
-                    <Button
+                <Button
                     x:Name="PaisesBtn"
                     Text="Países de 10 capitales"
                     FontFamily="Consola"
@@ -45,9 +42,8 @@
                     TextColor="Black"
                     BorderColor="Black"
                     BorderWidth="2" />
-                </HorizontalStackLayout>
-            </VerticalStackLayout>
-        </Grid>
-    </ScrollView>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </Grid>
 
 </ContentPage>
